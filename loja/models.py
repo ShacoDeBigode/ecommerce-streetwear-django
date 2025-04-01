@@ -57,7 +57,7 @@ class Pedido(models.Model):
 
 
 
-class Item_pedido(models.Model):
+class ItemPedido(models.Model):
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, verbose_name='Pedido', related_name='itens')
     produto = models.ForeignKey('Produto', on_delete=models.CASCADE, verbose_name='Produto')
     quantidade = models.IntegerField(default= 1, verbose_name='Quantidade')

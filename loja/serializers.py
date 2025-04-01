@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Produto, Pedido, Item_pedido
+from .models import Produto, Pedido, ItemPedido
 from django.contrib.auth.models import User
 
 
@@ -23,5 +23,5 @@ class PedidoSerializer(serializers.ModelSerializer):
 class ItemPedidoSerializer(serializers.ModelSerializer):
     produto = ProdutoSerializer(read_only=True)
     class Meta:
-        model = Item_pedido
+        model = ItemPedido
         fields = '__all__'
